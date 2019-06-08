@@ -76,6 +76,12 @@
                 return playList;  
             }    
 
+            public async Task AddRecord(PlayList playList)  
+            {  
+                await mapper.InsertAsync(playList);  
+                
+            } 
+
 
         }  
     }  

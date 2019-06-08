@@ -47,5 +47,13 @@ namespace cassandraWebapi.Controllers
             return playList;
         }
 
+         // POST api/values
+        [HttpPost]
+        public Task Post(PlayList playList)
+        {
+            var result = _dataAccessProvider.AddRecord(playList);
+            return result;
+        }
+
     }
 }
