@@ -9,7 +9,7 @@
             // Task AddRecord(PlayList playList);  
             // Task UpdateRecord(PlayList playList);  
             // Task DeleteRecord(string id);  
-            // Task<PlayList> GetSingleRecord(string id);  
+             Task<PlayList> GetSingleRecord(int id);  
             Task<IEnumerable<PlayList>> GetAllRecords();  
         }  
     }  

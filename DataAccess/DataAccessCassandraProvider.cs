@@ -66,10 +66,16 @@
             {  
                 IEnumerable<PlayList> musicPlaylists = await mapper.FetchAsync<PlayList>("SELECT * FROM MusicPlaylist");  
                 // IEnumerable<PlayList> musicPlaylists =  mapper.Fetch<PlayList>("SELECT * FROM MusicPlaylist");  
-               
-               
                 return musicPlaylists;  
-      
-            }  
+            }
+
+
+            public async Task<PlayList> GetSingleRecord(int id)  
+            {  
+                var playList = await mapper.SingleOrDefaultAsync<PlayList>("SELECT * FROM MusicPlaylist WHERE SongId = ?", id);  
+                return playList;  
+            }    
+
+
         }  
     }  

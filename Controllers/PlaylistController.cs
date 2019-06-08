@@ -39,5 +39,13 @@ namespace cassandraWebapi.Controllers
                 return musicPlaylists;
         }
 
+         // GET api/values/5
+        [HttpGet("{id}")]
+        public Task<PlayList> Get(int id)
+        {
+            var playList = _dataAccessProvider.GetSingleRecord(id);
+            return playList;
+        }
+
     }
 }
