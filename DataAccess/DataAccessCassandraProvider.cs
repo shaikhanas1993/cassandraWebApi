@@ -82,6 +82,12 @@
                 
             } 
 
+            public async Task DeleteRecord(int id)  
+            {  
+                var deleteStatement = new SimpleStatement("DELETE FROM MusicPlaylist WHERE SongId = ? ", id);  
+                await CassandraInitializer.session.ExecuteAsync(deleteStatement);  
+            }  
+
 
         }  
     }  

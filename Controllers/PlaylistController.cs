@@ -25,7 +25,7 @@ namespace cassandraWebapi.Controllers
         // [Route("api/playList/list")]  
         public async Task<IEnumerable<PlayList>> Get()
         {
-            Console.WriteLine("-----------XXXXXXXXXXXXx------------------");
+           // Console.WriteLine("-----------XXXXXXXXXXXXx------------------");
             
              var musicPlaylists =  await _dataAccessProvider.GetAllRecords();  
             //   foreach (var row in musicPlaylists)
@@ -53,6 +53,15 @@ namespace cassandraWebapi.Controllers
         {
             var result = _dataAccessProvider.AddRecord(playList);
             return result;
+        }
+
+        // DELETE api/values/5
+        [HttpDelete("{id}")]
+        public Task Delete(int id)
+        {
+                var result = _dataAccessProvider.DeleteRecord(id);
+                return result;
+                
         }
 
     }
