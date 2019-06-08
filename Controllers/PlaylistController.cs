@@ -64,5 +64,17 @@ namespace cassandraWebapi.Controllers
                 
         }
 
+        // PUT api/values/5
+        [HttpPut("{id}")]
+        public Task Put(int id,PlayList playList)
+        {
+           
+           
+            var result = _dataAccessProvider.UpdateRecord(id,playList);
+            Console.WriteLine("result====="+ result);
+            
+            return result;
+        }
+
     }
 }

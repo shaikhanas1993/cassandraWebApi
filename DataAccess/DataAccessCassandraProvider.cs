@@ -21,47 +21,6 @@
 
             }  
       
-
-            /* 
-            public async Task AddRecord(PlayList addressBook)  
-            {  
-                addressBook.Id = Guid.NewGuid().ToString();  
-                await mapper.InsertAsync(addressBook);  
-            }  
-      
-            public async Task UpdateRecord(PlayList addressBook)  
-            {  
-                var updateStatement = new SimpleStatement("UPDATE addressbook SET " +  
-                    " firstname = ? " +  
-                    ",lastname  = ? " +  
-                    ",gender    = ? " +  
-                    ",address   = ? " +  
-                    ",zipcode   = ? " +  
-                    ",country   = ? " +  
-                    ",state     = ? " +  
-                    ",phone     = ? " +  
-                    " WHERE id  = ? ",  
-                    addressBook.FirstName, addressBook.LastName, addressBook.Gender,  
-                    addressBook.Address, addressBook.ZipCode, addressBook.Country,  
-                    addressBook.State, addressBook.Phone, addressBook.Id);  
-      
-                await CassandraInitializer.session.ExecuteAsync(updateStatement);  
-            }  
-      
-            public async Task DeleteRecord(string id)  
-            {  
-                var deleteStatement = new SimpleStatement("DELETE FROM addressbook WHERE id = ? ", id);  
-                await CassandraInitializer.session.ExecuteAsync(deleteStatement);  
-            }  
-      
-            public async Task<PlayList> GetSingleRecord(string id)  
-            {  
-                AddressBook addressBook = await mapper.SingleOrDefaultAsync<AddressBook>("SELECT * FROM addressbook WHERE id = ?", id);  
-                return addressBook;  
-            }  
-
-            */
-      
             public async Task<IEnumerable<PlayList>> GetAllRecords()  
             {  
                 IEnumerable<PlayList> musicPlaylists = await mapper.FetchAsync<PlayList>("SELECT * FROM MusicPlaylist");  
@@ -86,6 +45,13 @@
             {  
                 var deleteStatement = new SimpleStatement("DELETE FROM MusicPlaylist WHERE SongId = ? ", id);  
                 await CassandraInitializer.session.ExecuteAsync(deleteStatement);  
+            }  
+
+            public async Task UpdateRecord(int id,PlayList playList)  
+            {  
+               await mapper.UpdateAsync<PlayList>("SET Singer = ? WHERE SongId = ? and SongName = ?", playList.Singer, id,playList.SongName);
+      
+                
             }  
 
 
