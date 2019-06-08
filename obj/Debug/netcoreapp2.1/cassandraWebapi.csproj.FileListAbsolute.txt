@@ -1,0 +1,14 @@
+/home/anas/Projects/cassandraWebapi/bin/Debug/netcoreapp2.1/cassandraWebapi.deps.json
+/home/anas/Projects/cassandraWebapi/bin/Debug/netcoreapp2.1/cassandraWebapi.runtimeconfig.json
+/home/anas/Projects/cassandraWebapi/bin/Debug/netcoreapp2.1/cassandraWebapi.runtimeconfig.dev.json
+/home/anas/Projects/cassandraWebapi/bin/Debug/netcoreapp2.1/cassandraWebapi.dll
+/home/anas/Projects/cassandraWebapi/bin/Debug/netcoreapp2.1/cassandraWebapi.pdb
+/home/anas/Projects/cassandraWebapi/obj/Debug/netcoreapp2.1/cassandraWebapi.csprojAssemblyReference.cache
+/home/anas/Projects/cassandraWebapi/obj/Debug/netcoreapp2.1/cassandraWebapi.csproj.CoreCompileInputs.cache
+/home/anas/Projects/cassandraWebapi/obj/Debug/netcoreapp2.1/cassandraWebapi.RazorAssemblyInfo.cache
+/home/anas/Projects/cassandraWebapi/obj/Debug/netcoreapp2.1/cassandraWebapi.RazorAssemblyInfo.cs
+/home/anas/Projects/cassandraWebapi/obj/Debug/netcoreapp2.1/cassandraWebapi.AssemblyInfoInputs.cache
+/home/anas/Projects/cassandraWebapi/obj/Debug/netcoreapp2.1/cassandraWebapi.AssemblyInfo.cs
+/home/anas/Projects/cassandraWebapi/obj/Debug/netcoreapp2.1/cassandraWebapi.RazorTargetAssemblyInfo.cache
+/home/anas/Projects/cassandraWebapi/obj/Debug/netcoreapp2.1/cassandraWebapi.dll
+/home/anas/Projects/cassandraWebapi/obj/Debug/netcoreapp2.1/cassandraWebapi.pdb
